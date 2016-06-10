@@ -1,7 +1,6 @@
 Spree::Payment.class_eval do
-  has_one :adjustment, :as => :source, :dependent => :destroy
 
-  # for Cash on Delivery
+
   def build_source
     return unless new_record?
 
@@ -11,6 +10,7 @@ Spree::Payment.class_eval do
       self.source.user_id = self.order.user_id if self.order
     end
 
+    # for Cash on Delivery
     if payment_method and payment_method.respond_to?(:post_create)
       payment_method.post_create(self)
     end
