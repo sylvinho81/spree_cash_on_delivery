@@ -68,4 +68,9 @@ class Spree::PaymentMethod::CashOnDelivery < Spree::PaymentMethod
     end
 
 
+    private
+
+    def fee_exists?(payment)
+      payment.order.adjustments.where("label = ?", label).exists?
+    end
 end
