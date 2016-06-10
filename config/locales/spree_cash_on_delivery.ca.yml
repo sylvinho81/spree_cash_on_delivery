@@ -1,0 +1,14 @@
+ca:
+  cash_on_delivery:
+    views:
+      payment:
+        description: "El pagament s'efectuarà en el moment de rebre la comanda"
+        concept: "Est és el nombre de la teva comanda"
+        amount: "L'import de la teva comanda és"
+        extra: "Es cobra un extra de %{extra} euros per aquest servei."
+      admin:
+        advice: "Contra-reembolso"
+        total: "Extra %{extra} euros"
+        orders:
+          extra: "Falta per incloure l'extra pel servei de contra-reembolso"
+    label: "Extra contra-reembolso"

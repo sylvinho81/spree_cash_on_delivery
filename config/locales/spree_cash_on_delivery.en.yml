@@ -1,0 +1,17 @@
+en:
+  cash_on_delivery:
+    views:
+      payment:
+        description: "Payment is made ​​at the time of receiving the order"
+        concept: "This is the number of your order"
+        amount: "The amount of your order is"
+        extra: "%{extra} euros extra charge for this service."
+      admin:
+        advice: "COD"
+        total: "Extra %{extra} euros"
+        orders:
+          extra: "It remains to include the extra cash on delivery service"
+    label: "Extra COD"
+
+
+

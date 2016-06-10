@@ -1,0 +1,8 @@
+<!-- insert_after '#payment_status' -->
+
+<% if @order.payment_method.present? && @order.payment_method.type == "Spree::PaymentMethod::CashOnDelivery" && @order.payment_method.preferred_fee.present? %>
+    <dt><%= t('cash_on_delivery.views.admin.advice') %>: </dt>
+    <dd><span class="state" style="background-color:#5498DA; color: black;"><%= t('cash_on_delivery.views.admin.total', :extra => @order.payment_method.preferred_fee)%></span></dd>
+<% end %>
+
+
