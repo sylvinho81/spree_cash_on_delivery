@@ -1,4 +1,4 @@
-module SpreeCash0nDelivery
+module SpreeCashOnDelivery
   module Generators
     class InstallGenerator < Rails::Generators::Base
 
