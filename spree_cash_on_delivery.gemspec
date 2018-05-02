@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_cash_on_delivery'
-  s.version     =  '3.0.0'
+  s.version     =  '3.1.0'
   s.summary     = 'Payment Method Cash On Delivery'
   s.description = 'Payment Method Cash On Delivery'
   s.author      = 'Pablo'
@@ -15,5 +15,5 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'spree_core', '~> 3.0.0'
+  s.add_dependency 'spree_core', '~> 3.4.5'
 end

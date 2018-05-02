@@ -1,6 +1,6 @@
 class Spree::PaymentMethod::CashOnDelivery < Spree::PaymentMethod
 
-    preference :fee, :float
+    preference :fee, :float, default: 0.0
 
     def payment_profiles_supported?
       true # we want to show the confirm step.
@@ -68,4 +68,9 @@ class Spree::PaymentMethod::CashOnDelivery < Spree::PaymentMethod
     end
 
 
+    private
+
+    def fee_exists?(payment)
+      payment.order.adjustments.where("label = ?", label).exists?
+    end
 end
